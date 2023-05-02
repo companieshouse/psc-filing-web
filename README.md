@@ -1,12 +1,6 @@
 # psc-filing-web
 PSC filing web application will allow users to appoint, change and terminate PSCs.
 
-The initial skeleton will be a copy of node-review-starter-web-ts. 
-We will remove the existing dummy web pages when we start to develop the web application.
-
-#### The following README is from node-review-web-starter-ts
-A more accurate psc-filing-web README will be created when we start to work on the application.
-
 ## Node Versions
 
 - Before downloading and installing this project, ensure you have Node version `16.19.1` installed on your device. Version `16.x.x` should still work but `16.19.1` is recommended.
@@ -17,7 +11,7 @@ A more accurate psc-filing-web README will be created when we start to work on t
 
 ## Downloading and Installing
 
-Having cloned the project into your project root, run the following commands:
+Having cloned the project, run the following commands:
 
 ``` cd psc-filing-web```
 
@@ -27,21 +21,13 @@ Having cloned the project into your project root, run the following commands:
 
 - The web-starter uses environment variables for configuration.
 
-- The config file is located at `src/config/.env.example` and should be copied over to `src/config/.env`. This is because `.env.example` is versioned and does not contain any sensitive information whereas `.env` (which is the actual config file used by the app) is not versioned due to the fact that it may (or may not) be used to store sensitive application information e.g passwords, certificate paths, API keys, etc...
-
-- You will need to tweak some values in `.env` to suit your local set up e.g. port number, hostname, SSL settings, etc...
+- You will need to tweak some values in `.env` to suit your local set up e.g. port number, hostname, etc if running the project locally.
 
 - Of particular note is the `CDN_HOST` value. You may:
     - leave it empty to use locally built assets, or
     - use the `staging` or `prod` value to gain access to assets not available in your local environment e.g. vendor specific libraries like jQuery (this is because the `govuk-frontend` and `govuk_frontend_toolkit` npm packages do not ship with vendor specific libraries).
     - You can get the production value from the Platform Team or by viewing the page source of the [DevHub](https://developer.company-information.service.gov.uk/) page.
     - At the time of writing, this value is `//drv45oe4qnhl0.cloudfront.net` but can change at any time. Always ensure you have the most recent value when using it.
-
-### SSL Set-up
-
-- If you wish to work with ssl-enabled endpoints locally, ensure you turn the `NODE_SSL_ENABLED` property to `ON` in the config and also provide paths to your private key and certificate.
-
-- In a typical production environment, this might never be required as the Node app usually sits behind a load balancer with SSL termination.
 
 ### Running the Tests
 
@@ -73,19 +59,13 @@ or, to watch for changes with auto restart in your dev environment, run:
 
 ``` npm run start:watch ```
 
-...and navigate to http://localhost:3000/ (or whatever hostname/port number combination you've changed the config values to)
-
-For SSL connections, navigate to https://localhost:3443
+...and navigate to http://localhost:8090/ (or whatever hostname/port number combination you've changed the config values to)
 
 _**A few quick notes below about the warnings you get when you start the app:**_
 
 - Presently, when you start the app, you will see a bunch of deprecation warnings from the SASS compiler. These come from the`govuk-frontend` package that has not yet been updated to match the latest SASS guidelines.
 - The `govuk-frontend` team are aware of this problem and have an issue pending [here](https://github.com/alphagov/govuk-frontend/issues/2238)
 - So, for now, given that these warnings do not stop a successful build from happening, please **ignore** them until such a time when the package is updated with a fix.
-
-### Empty Directories and Files
-
-Empty directories and files, wherever you find them, are only there for completeness -- to showcase a folder structure that you should use.
 
 ## Additional Notes
 

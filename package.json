@@ -4,7 +4,7 @@
   "description": "A web application will allow users to appoint, change and terminate PSCs.",
   "main": "dist/server.js",
   "engines": {
-    "node": "16.19.1",
+    "node": "^16.19.1",
     "npm": "^8"
   },
   "scripts": {
@@ -108,7 +108,7 @@
     "ignore": [
       "**/*.test.ts"
     ],
-    "exec": "npm run build && source ./dist/config/.env && node dist/server.js"
+    "exec": "npm run build && node dist/server.js"
   },
   "directories": {
     "test": "test"

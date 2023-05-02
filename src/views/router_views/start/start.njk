@@ -1,5 +1,7 @@
 {% extends "layouts/default.njk" %}
 
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% block main_content %}
 
     <h1 class="govuk-heading-xl">Add, update and cease a person with significant control (PSC)</h1>
@@ -11,5 +13,9 @@
       <li>cease a PSC</li>
       <li>add or remove a PSC statement</li>
     </ul>
+
+    {{ govukButton({
+    text: "Start"
+    }) }}
 
 {% endblock %}

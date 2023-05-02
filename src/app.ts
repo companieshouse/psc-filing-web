@@ -6,9 +6,6 @@ import routerDispatch from "./router.dispatch";
 
 const app = express();
 
-// const viewPath = path.join(__dirname, "/views");
-// app.set("views", viewPath);
-
 app.set("views", [
     path.join(__dirname, "views"),
     path.join(__dirname, "../node_modules/govuk-frontend"),
