@@ -20,8 +20,7 @@
     "test": "mocha --recursive test/src/**/*.ts",
     "start": "npm run build && source ./dist/config/.env && node dist/server.js",
     "start:watch": "nodemon",
-    "debug-run": "NODE_ENV=development node -r ts-node/register/transpile-only --inspect=0.0.0.0 src/app.ts",
-    "dev": "nodemon --watch src --ignore 'src/*/.test.ts' --ext ts --exec 'NODE_OPTIONS=\"--inspect=0.0.0.0\" ts-node ./src/server.ts'"
+    "debug-run": "NODE_ENV=development node -r ts-node/register/transpile-only --inspect=0.0.0.0 src/app.ts"
   },
   "husky": {
     "hooks": {

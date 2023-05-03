@@ -17,6 +17,16 @@ Having cloned the project, run the following commands:
 
 ```npm install```
 
+From your docker-chs-development directory run:-
+
+``` ./bin/chs-dev modules disable psc-filing ```
+
+``` ./bin/chs-dev modules enable psc-filing ```
+
+This will detect psc-filing-web service, allowing you to ```tilt up``` and access the
+service via the following prefix, ```http://chs.local/persons-with-significant-control```, 
+followed by a given endpoint. e.g. ```/start```.
+
 ### Config Set-up
 
 - The web-starter uses environment variables for configuration.
@@ -49,7 +59,7 @@ or
 
 For these tests, we've used [Mocha](http://mochajs.org/) with [Sinon](http://sinonjs.org/) and [Chai](http://chaijs.com/).
 
-### Running the App
+### Running the App locally
 
 To start the application, run:
 
@@ -100,7 +110,7 @@ _**A few quick notes below about the warnings you get when you start the app:**_
 
 - In the event of errors, the handler will populate the view object (`this.viewData.errors`) with the errors thrown. For validation errors, the entire error stack will be added in this field, however, in the event of non-validation errors, this field will be populated with a generic error message.
 
-- The view partial for errors (`./src/views/partials/error_summary.njk`) is included in every page and will only display any errors that occurred during processing at the top of the page. Have a look at the `/company/create` screen for an example.
+- The view partial for errors (`./src/views/partials/error_summary.njk`) is included in every page and will only display any errors that occurred during processing at the top of the page.
 
 - Additionally, the generic error partial (`./src/views/partials/error.njk`) can be used to display an unknown error on a separate page without any additional page content.
 

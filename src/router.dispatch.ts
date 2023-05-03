@@ -10,7 +10,7 @@ const routerDispatch = (app: Application) => {
 
     router.use("/start", startRouter);
     router.use("*", (req: Request, res: Response) => {
-        console.log(req.path);
+        console.log(req.originalUrl);
         res.status(404).render("partials/error_400");
     });
 };

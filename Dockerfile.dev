@@ -16,7 +16,5 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-#RUN /bin/bash -c "source
-#RUN ["/bin/bash", "-c", "'npm run start'"]
 CMD [ "npm", "run", "start:watch" ]
 # ENTRYPOINT [ "bash" ]

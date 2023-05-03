@@ -8,7 +8,7 @@ import app from "./app";
 const httpServer = http.createServer(app);
 // set NODE_PORT in the corresponding docker-chs-development yaml file.
 httpServer.listen(process.env.NODE_PORT, () => {
-    console.log(`Server started at: ${process.env.NODE_HOSTNAME}:${process.env.NODE_PORT}`);
+    console.log(`Server started.`);
 }).on("error", err => {
     logger.error(`${err.name} - HTTP Server error: ${err.message} - ${err.stack}`);
 });
