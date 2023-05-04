@@ -11,7 +11,7 @@ export class StartHandler extends GenericHandler {
     }
 
     execute (req: Request, response: Response): Promise<Object> {
-        logger.info(`GET request for to serve stat page`);
+        logger.info(`GET request for to serve start page`);
         // ...process request here and return data for the view
         return Promise.resolve(this.viewData);
     }

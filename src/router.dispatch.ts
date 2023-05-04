@@ -8,8 +8,9 @@ const routerDispatch = (app: Application) => {
     // Required for endpoint prefix
     app.use("/persons-with-significant-control", router);
 
-    router.use("/", startRouter);
+    router.use("/start", startRouter);
     router.use("*", (req: Request, res: Response) => {
+        console.log(req.originalUrl);
         res.status(404).render("partials/error_400");
     });
 };
