@@ -15,13 +15,13 @@ Having cloned the project, run the following commands:
 
 ``` cd psc-filing-web```
 
-```npm install```
-
 From your docker-chs-development directory run:-
 
 ``` ./bin/chs-dev modules disable psc-filing ```
 
 ``` ./bin/chs-dev modules enable psc-filing ```
+
+``` ./bin/chs-dev development enable psc-filing-web```
 
 This will detect psc-filing-web service, allowing you to ```tilt up``` and access the
 service via the following prefix, ```http://chs.local/persons-with-significant-control```, 
