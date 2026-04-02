@@ -6,7 +6,7 @@ export class StartHandler extends GenericHandler {
 
     constructor () {
         super();
-        this.viewData.title = "Add, update and cease a person with significant control (PSC)";
+        this.viewData.title = "Cease a person with significant control (PSC)";
         this.viewData.sampleKey = "sample value for start page screen";
     }
 
